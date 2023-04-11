@@ -1,0 +1,237 @@
+@import url(<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">);
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #1f242d;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 20px 10%;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    display: flex;
+}
+
+.logo{
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
+  
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 35px;
+    transition: .3s;
+    animation: slidetop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color:  rgb(0, 255, 204);
+}
+
+.home{
+    position: relative;
+    width: 82%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content  h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slidebottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span{
+    color: rgb(0, 255, 204);
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slidetop 1s ease forwards;
+    animation-delay: .7s;
+    -webkit-animation: slidetop 1s ease forwards;
+}
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: slideright 1s ease forwards;
+    animation-delay: 1s;
+    -webkit-animation: slideright 1s ease forwards;
+}
+.home-content p{
+    font-size: 16px;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-img{
+    margin-top: -13%;
+}
+
+.home-img img{
+    max-width: 500px;
+    height: 500px;
+    opacity: 0;
+    animation: zoomin 1s ease forwards;
+    -webkit-animation: zoomin 1s ease forwards, floatimage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+}
+
+.social-media a{
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border:2px solid  rgb(0, 255, 204);
+    border-radius: 50%;
+   font-size: 20px;
+   color:  rgb(0, 255, 204);
+   text-decoration: none;
+   margin: 30px 15px 30px 0;
+   opacity: 0;
+   animation: slideleft 1s ease forwards;
+   animation-delay: calc(.2s * var(--i));
+}
+
+.social-media a:hover{
+    background:  rgb(0, 255, 204);
+    color: #1f242d;
+    box-shadow: 0 0 20px  rgb(0, 255, 204);
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background:  rgb(0, 255, 204);
+    border-radius: 40px;
+    box-shadow: 0 0 10px  rgb(0, 255, 204);
+    text-decoration: none;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 2s;
+    -webkit-animation: slidetop 1s ease forwards;
+}
+
+
+
+/* KEYFRAMES ANIMATION */
+@keyframes  slideright{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+}
+}
+
+@keyframes  slideleft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+}
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+}
+}
+
+@keyframes  slidetop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+}
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+}
+}
+@keyframes  slidebottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+}
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+}
+}
+
+@keyframes  zoomin{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+}
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+}
+
+@keyframes floatimage{
+    0%{
+        transform: translateY(0);
+}
+50%{
+    transform: translateY(-24px);
+}
+100%{
+    transform: translateY(0);
+}
+}
