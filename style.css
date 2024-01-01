@@ -235,3 +235,21 @@ body{
     transform: translateY(0);
 }
 }
+
+@media only screen and (max-width: 600px) {
+    .header{
+        flex-direction: column;
+    }
+
+    .navbar a{
+        margin: 10px 0;
+    }
+
+    .home{
+        flex-direction: column;
+    }
+
+    .home-content, .home-img{
+        width: 100%;
+    }
+}
